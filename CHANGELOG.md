@@ -23,6 +23,19 @@ Here we write the updates of future releases.
 ### Security
 
 
+## [1.0.3] - 09-01-2023
+
+### Added
+- App theme file
+- Custom print utility file
+- flutter bloc and equatable plugin
+- App theme cubit set
+
+### Changed
+- Hardcoded color with theme cubit data
+- Wrapped Material app widget with Bloc provider
+
+
 ## [1.0.2] - 09-01-2023
 
 ### Added

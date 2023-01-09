@@ -1,4 +1,6 @@
+import 'package:fintek/logic/cubit/app_theme_cubit.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:sizer/sizer.dart';
 
 
@@ -18,6 +20,7 @@ class AppTexts extends StatefulWidget {
   final Color? textColor;
   final TextAlign? textAlign;
   final FontWeight? fontWeight;
+
   @override
   State<AppTexts> createState() => _AppTextsState();
 }
@@ -25,15 +28,20 @@ class AppTexts extends StatefulWidget {
 class _AppTextsState extends State<AppTexts> {
   @override
   Widget build(BuildContext context) {
-    return Text(
-      widget.textString,
-      textAlign: widget.textAlign??TextAlign.start,
-      style: TextStyle(
-          color: widget.textColor??Colors.white,
-          fontSize: widget.textFontSize??12.0.sp,
-          fontWeight: widget.fontWeight??FontWeight.normal,
-          fontFamily: 'Poppins'
-      ),
+    return BlocBuilder<AppThemeCubit, AppThemeState>(
+      builder: (context, appThemeState) {
+        return Text(
+          widget.textString,
+          textAlign: widget.textAlign ?? TextAlign.start,
+          style: TextStyle(
+              color: widget.textColor ??
+                  (appThemeState as AppThemeSet).themeClass.textColor_1,
+              fontSize: widget.textFontSize ?? 12.0.sp,
+              fontWeight: widget.fontWeight ?? FontWeight.normal,
+              fontFamily: 'Poppins'
+          ),
+        );
+      },
     );
   }
 }
