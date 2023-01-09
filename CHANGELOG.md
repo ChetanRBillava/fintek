@@ -22,7 +22,7 @@ Here we write the updates of future releases.
 
 ### Security
 
-
+ 
 ## [1.0.3] - 09-01-2023
 
 ### Added
