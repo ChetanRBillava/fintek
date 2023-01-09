@@ -23,6 +23,33 @@ Here we write the updates of future releases.
 ### Security
 
 
+## [1.0.3] - 09-01-2023
+
+### Added
+- App theme file
+- Custom print utility file
+- flutter bloc and equatable plugin
+- App theme cubit set
+
+### Changed
+- Hardcoded color with theme cubit data
+- Wrapped Material app widget with Bloc provider
+
+
+## [1.0.2] - 09-01-2023
+
+### Added
+- Router file for navigation
+- Route exception file
+- App texts utility file
+- Sizer plugin for responsiveness
+- Initialised Sizer plugin in main file
+
+### Changed
+- Navigation in Material app widget
+- Text widget in splash screen to app text widget from utils folder
+
+
 ## [1.0.1] - 09-01-2023
 
 ### Added
