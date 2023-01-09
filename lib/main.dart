@@ -1,5 +1,7 @@
+import 'package:fintek/presentation/router/app_router.dart';
 import 'package:fintek/presentation/screens/splash_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:sizer/sizer.dart';
 
 import 'core/constants/strings.dart';
 
@@ -13,10 +15,13 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: AppStrings.appTitle,
-      home: SplashScreen(),
-    );
+    return Sizer(builder: (context, constraints, orientation) {
+      return const MaterialApp(
+        debugShowCheckedModeBanner: false,
+        title: AppStrings.appTitle,
+        initialRoute: AppRouter.splash,
+        onGenerateRoute: AppRouter.onGenerateRoute,
+      );
+    });
   }
 }

@@ -1,5 +1,6 @@
 import 'package:fintek/core/constants/images.dart';
 import 'package:fintek/core/constants/strings.dart';
+import 'package:fintek/presentation/utils/app_texts.dart';
 import 'package:flutter/material.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -21,12 +22,7 @@ class _SplashScreenState extends State<SplashScreen> {
             Image.asset(AppImages.logo),
             const CircularProgressIndicator(),
             const SizedBox(height: 5),
-            const Text(
-              AppStrings.appVersion,
-              style: TextStyle(
-                color: Colors.white
-              ),
-            )
+            const AppTexts(textString: AppStrings.appVersion),
           ],
         ),
       ),
