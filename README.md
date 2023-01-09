@@ -1,6 +1,7 @@
 # fintek
 
 A flutter assignment from Chinmay Phadke of Cambridge Wealth
+
 [Click here](https://www.figma.com/proto/B15VGm2CWVICVHJiu51zZp/Assignment?node-id=6%3A2&scaling=contain&page-id=0%3A1) to visit the figma prototype
 
 ## Getting Started

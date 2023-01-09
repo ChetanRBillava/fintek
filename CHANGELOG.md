@@ -23,6 +23,21 @@ Here we write the updates of future releases.
 ### Security
 
 
+## [1.0.1] - 09-01-2023
+
+### Added
+- App logo
+- Core files App strings and App images in constants folder of core folder
+- Splash screen
+- Assets folder in pubspec file
+
+### Changed
+- Home file for Material app widget from Home page to Splash screen
+
+### Removed
+- Home screen class in main file
+
+
 ## [1.0.0] - 09-01-2023
 
 ### Added
