@@ -22,6 +22,18 @@ Here we write the updates of future releases.
 
 ### Security
 
+
+## [1.0.4] - 10-01-2023
+
+### Added
+- Background image for home screen
+- Home screen
+- Google fonts plugin
+- Home screen tile
+
+### Changed
+- App texts plugin text style with Poppins of Google fonts plugin
+
  
 ## [1.0.3] - 09-01-2023
 
