@@ -26,10 +26,11 @@ Here we write the updates of future releases.
 ## [1.0.5] - 11-01-2023
 
 ### Added
-- Notifications screen and tile
+- Notifications screen and tile layouts for both web and app interface
 
 ### Changed
 - Notification tile reference from home screen file to a separate file
+- Replaced list view builder with for loop
 
 
 ## [1.0.4] - 10-01-2023

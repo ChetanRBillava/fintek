@@ -346,15 +346,39 @@ class _WebLayoutState extends State<WebLayout> {
                       ),
                     ],
                   ),
-                  ///Mid
+                  ///Tiles
                   SizedBox(
-                    width: 60.w,
+                    width: 95.w,
                     child: Padding(
                       padding: EdgeInsets.only(top: 5.h, left: 2.w),
                       child: SingleChildScrollView(
                         child: Column(
                           children: [
                             Row(
+                              mainAxisAlignment: MainAxisAlignment.end,
+                              children: [
+                                GestureDetector(
+                                  onTap: (){
+                                    Navigator.of(context).pushNamed(AppRouter.notifications);
+                                  },
+                                  child: Container(
+                                    decoration: BoxDecoration(
+                                        color: themeState.themeClass.secondaryColor,
+                                        shape: BoxShape.circle
+                                    ),
+                                    child: Padding(
+                                      padding: EdgeInsets.all(1.sp),
+                                      child: Icon(
+                                        Icons.notifications,
+                                        size: 4.sp,
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
                                 AppTexts(
                                   textString: 'HOME > DETAILS',
@@ -506,16 +530,9 @@ class _WebLayoutState extends State<WebLayout> {
                                         ),
                                       ),
                                     ),
-
                                     ///Tiles
-                                    ListView.builder(
-                                        itemCount: 10,
-                                        shrinkWrap: true,
-                                        physics: const NeverScrollableScrollPhysics(),
-                                        itemBuilder: (context, i){
-                                          return const HomeTiles();
-                                        }
-                                    ),
+                                    for(int i=0; i<10; i++)
+                                      const HomeTiles(),
                                   ],
                                 ),
                               ),
@@ -523,54 +540,6 @@ class _WebLayoutState extends State<WebLayout> {
                           ],
                         ),
                       ),
-                    ),
-                  ),
-                  ///notifications
-                  Padding(
-                    padding: EdgeInsets.only(top: 3.h, left: 2.w),
-                    child: Column(
-                      children: [
-                        SizedBox(
-                          width: 30.w,
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              AppTexts(
-                                textString: 'NOTIFICATIONS',
-                                textFontSize: 3.5.sp,
-                                textColor: themeState.themeClass.textColor_1,
-                                fontWeight: FontWeight.bold,
-                              ),
-                              Container(
-                                decoration: BoxDecoration(
-                                  color: themeState.themeClass.secondaryColor,
-                                  shape: BoxShape.circle
-                                ),
-                                child: Padding(
-                                  padding: EdgeInsets.all(1.sp),
-                                  child: Icon(
-                                    Icons.notifications,
-                                    size: 3.sp,
-                                  ),
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                        SizedBox(height: 2.h,),
-                        /*Container(
-                          height: 50.h,
-                          child: ListView.builder(
-                              itemCount: 5,
-                              //shrinkWrap: true,
-                              physics: const NeverScrollableScrollPhysics(),
-                              itemBuilder: (context, i){
-                                return const NotificationTile();
-                              }
-                          ),
-                        ),*/
-                        const NotificationTile()
-                      ],
                     ),
                   ),
                 ],
