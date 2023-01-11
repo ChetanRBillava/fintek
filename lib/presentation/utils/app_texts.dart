@@ -1,6 +1,7 @@
 import 'package:fintek/logic/cubit/app_theme_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:sizer/sizer.dart';
 
 
@@ -33,12 +34,11 @@ class _AppTextsState extends State<AppTexts> {
         return Text(
           widget.textString,
           textAlign: widget.textAlign ?? TextAlign.start,
-          style: TextStyle(
+          style: GoogleFonts.poppins(
               color: widget.textColor ??
                   (appThemeState as AppThemeSet).themeClass.textColor_1,
               fontSize: widget.textFontSize ?? 12.0.sp,
               fontWeight: widget.fontWeight ?? FontWeight.normal,
-              fontFamily: 'Poppins'
           ),
         );
       },
