@@ -19,6 +19,7 @@ class AppTheme {
   ///texts
   late Color textColor_1;
   late Color textColor_2;
+  late Color textColor_3;
   late Color textCaptionColor;
 
   ///button
@@ -83,6 +84,10 @@ class DarkTheme extends AppTheme{
   @override
   // TODO: implement primary
   Color get textColor_2 => const Color(0xffffb425);
+
+  @override
+  // TODO: implement primary
+  Color get textColor_3 => const Color(0xff000000);
 
   @override
   // TODO: implement primary

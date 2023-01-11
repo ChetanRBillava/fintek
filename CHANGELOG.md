@@ -33,6 +33,7 @@ Here we write the updates of future releases.
 
 ### Changed
 - App texts plugin text style with Poppins of Google fonts plugin
+- Separate widgets for Web layout in Splash and Home screen
 
  
 ## [1.0.3] - 09-01-2023
