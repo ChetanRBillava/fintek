@@ -6,7 +6,9 @@ import 'package:sizer/sizer.dart';
 
 import '../../core/constants/images.dart';
 import '../../presentation/utils/custom_print.dart';
+import '../router/app_router.dart';
 import '../widgets/home_screen_tile.dart';
+import '../widgets/notification_tile.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -104,16 +106,21 @@ class _MobileLayoutState extends State<MobileLayout> {
                         ),
                         Padding(
                           padding: EdgeInsets.only(right: 8.w, top: 5.h),
-                          child: Container(
-                            decoration: BoxDecoration(
-                                color: themeState.themeClass.secondaryColor.withOpacity(0.15),
-                                shape: BoxShape.circle
-                            ),
-                            child: Padding(
-                              padding: EdgeInsets.all(2.w),
-                              child: Icon(
-                                Icons.notifications_sharp,
-                                color: themeState.themeClass.textColor_1,
+                          child: GestureDetector(
+                            onTap: (){
+                              Navigator.of(context).pushNamed(AppRouter.notifications);
+                            },
+                            child: Container(
+                              decoration: BoxDecoration(
+                                  color: themeState.themeClass.secondaryColor.withOpacity(0.15),
+                                  shape: BoxShape.circle
+                              ),
+                              child: Padding(
+                                padding: EdgeInsets.all(2.w),
+                                child: Icon(
+                                  Icons.notifications_sharp,
+                                  color: themeState.themeClass.textColor_1,
+                                ),
                               ),
                             ),
                           ),
@@ -576,44 +583,4 @@ class _WebLayoutState extends State<WebLayout> {
   }
 }
 
-class NotificationTile extends StatelessWidget {
-  const NotificationTile({
-    Key? key,
-  }) : super(key: key);
 
-  @override
-  Widget build(BuildContext context) {
-    return BlocBuilder<AppThemeCubit, AppThemeState>(
-      builder: (context, themeState) {
-        return Container(
-          decoration: BoxDecoration(
-              color: (themeState as AppThemeSet).themeClass.secondaryColor.withOpacity(0.1)
-          ),
-          child: Padding(
-            padding: EdgeInsets.all(1.w),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.start,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Padding(
-                  padding: EdgeInsets.only(right: 2.w),
-                  child: Icon(
-                    Icons.notifications_active,
-                    color: themeState.themeClass.textColor_2,
-                  ),
-                ),
-                SizedBox(
-                  width: 25.w,
-                  child: AppTexts(
-                    textString: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-                    textFontSize: 2.sp,
-                  ),
-                ),
-              ],
-            ),
-          ),
-        );
-      },
-    );
-  }
-}

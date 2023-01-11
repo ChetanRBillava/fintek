@@ -23,6 +23,15 @@ Here we write the updates of future releases.
 ### Security
 
 
+## [1.0.5] - 11-01-2023
+
+### Added
+- Notifications screen and tile
+
+### Changed
+- Notification tile reference from home screen file to a separate file
+
+
 ## [1.0.4] - 10-01-2023
 
 ### Added
