@@ -19,7 +19,6 @@ class HomeTiles extends StatelessWidget {
             return Padding(
               padding: EdgeInsets.only(left: 2.w, right: 2.w, top: 2.h),
               child: Container(
-                width: 35.w,
                 decoration: BoxDecoration(
                     color: (themeState as AppThemeSet).themeClass.formFieldBackgroundColor,
                     borderRadius: BorderRadius.all(Radius.circular(0.5.w)),
@@ -45,7 +44,7 @@ class HomeTiles extends StatelessWidget {
                                 ),
                               ),
                               Padding(
-                                padding: EdgeInsets.only(left: 5.w),
+                                padding: EdgeInsets.only(left: 1.w),
                                 child: AppTexts(
                                     textString: 'Title goes here',
                                   textFontSize: 3.sp,
